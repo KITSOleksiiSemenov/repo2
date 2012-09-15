@@ -1,0 +1,348 @@
+                             Release Notes for
+              P4EXP, the Perforce Windows Explorer Integration
+                             Version 2012.1
+
+Introduction
+
+        This document lists all user-visible changes to P4EXP that were 
+        made between releases 2003.2 and 2010.2. To display the version of 
+        P4EXP that you are using, choose "Connection Information..." 
+        command from the More menu. P4EXP 2010.2 is compatible with the 
+        2006.2 server release and above.
+
+        SSL support added in 2012.1
+        
+Supported Platforms
+
+        * Windows XP, Vista, 7, 2003, 2008 Intel (x86, x86_64)
+
+Known Limitations
+
+        Microsoft Vista and Windows 7 require a different implementation of
+        the column extension functionality than what is currently in P4EXP.
+
+---------------------------------------------------------------------------
+
+Bugs fixed since 2012.1/459107 (GA)
+
+        #469506 (Bug #55547, #55693, #55726, #55959, #55997)
+            Fix multitude of bugs associated with initial SSL
+            implementation.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2010.1
+
+        #295330 (Bug #40870)
+            Added text to 'show file state icons' preference stating system
+            restart is necessary upon changing.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2010.1
+
+        #262440 (Bug #40499)
+            P4EXP no longer slows explorer down when connected to a server
+            with a large number of clients or groups.
+
+        #237129 (Bug #31185)
+            File state icons now correctly displayed when you are logged in.
+
+        #234742 (Bug #31184)
+            Revert Unchanged now correctly displayed in context menu
+            when you are not logged in.
+
+        #234726 (Bug #36335)
+            Message displayed when you attempt to Revert Unchanged on a
+            changed file is now consistent with P4V.
+
+        #234510 (Bug #36319)
+            Results of reverting a locked file is no longer displayed as an
+            error or warning.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2009.2
+
+        #235350 (Bug #37770)
+            P4EXP debug logs are no longer written with invalid filenames.
+
+        #233506 (Bug #37230)
+            P4EXP now registers correctly on Windows 2000.
+        
+        #231090 #231230 (Bug #36059)
+            Improved error handling and reliability. Connections now make
+            sure that they are properly cleaned up before going away.
+
+        #227357 (Bug #36110)
+            When running Submit the P4V 'bookmark' option is no longer 
+            offered from the context menu of a file.
+
+        #222037 (Bug #36309)
+            Fixed crash when selecting "Save as Numbered Change' in Submit 
+            Dialog.
+
+---------------------------------------------------------------------------
+
+New functionality in 2009.1
+
+        #194271 (Bug #31007)
+            Both 32-bit and 64-bit versions of P4EXP can be now installed
+            on the same 64-bit machine.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2009.1
+
+        #209230 (Bug #29558)
+            P4V components are now properly launched with files containing
+            characters like #, @ and ' in its name
+
+        #208561 (Bug #34747)
+            P4EXP is now properly registered when upgrading from 2008.2.
+
+        #194242 (Bug #33107)
+            Diffing a file from the Submit dialog no longer closes the
+            Submit dialog.
+
+---------------------------------------------------------------------------
+
+New functionality in 2008.2
+
+        #161604 (Bug #13079)
+            P4EXP now uses P4V as its supporting client application.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2008.1
+
+        #155718 (Bug #27162)
+            Icons are now correctly displayed when client roots are 
+            specified using forward slashes.
+
+        #155710 (Bug #29549)
+            Menus now work with shortcuts on Windows Vista.
+
+        #155659 (Bug #29560)
+            P4EXP now correctly ignores files with names that include "...".
+
+        #155577 (Bug #21887)
+            Added support for the UTF_16_LE and UTF_31_LE charsets. 
+
+        #155387 (Bug #29558, #26685, #29585, #29586)
+            Files with special characters work with submit, diff, and 
+            revision history again.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2007.3
+
+        #130430 (Bug #25143)
+            Fixed support for running commands without saving the password or
+            logging in.
+
+        #130428
+            Updated the password requirements advisory text in the new
+            password dialog.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2007.2 
+
+        #130384 (Bug #21539)
+            P4EXP no longer resets the working directory if another process 
+            has changed it while P4EXP is working. 
+
+---------------------------------------------------------------------------
+
+New Functionality in 2006.2
+
+        #99444 (Bug #19569)
+            Added a button to add the client root of the current client to the 
+            filter list.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2006.2
+
+        #116299 (Bug #23424)
+            Fixed crash when connecting to Unicode enabled servers.
+
+        #99242 (Bug #20652)
+            P4EXP properly deals with plus mapped files and synced but 
+            unmapped files.
+
+        #98922 (Bug #18018)
+            P4EXP performance has been improved by sharing one connection to
+            issue multiple commands to the server when possible.
+
+        #98898 (Bug #20065, #20428)
+            P4EXP no longer blocks for more than five seconds when trying to 
+            connect to a server. This prevents Explorer from locking up in
+            cases where the server has gone down or the connection is 
+            suffering from extreme latency.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2006.1
+
+        #93685 (Bug #19832, #20101)
+            Icon overlays are now turned off by default.
+
+        #93726 (Bug #19449)
+            New menu option to add the selected path to the list of paths
+            operated on by P4EXP. This prevents P4EXP from accidentally being
+            turned off.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2006.1
+
+        #94039
+            Performance enhancement by reducing the number of registry 
+            accesses.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2005.2
+
+        #86601 (Bug #11802)
+            Users can now specify which folders P4EXP should be active in.
+            Under preferences users can set which paths the Perforce menu and
+            icon overlays should be active. This should be useful for folks 
+            experiencing performance problems when browsing outside of their 
+            client root.
+
+---------------------------------------------------------------------------
+
+Bugs Fixed in 2005.2
+
+        #86616
+            The P4EXP preferences are now always accessible from the menu.
+
+        #85888
+            Cut down on server calls by caching more information about the
+            server.
+
+        #85882 (Bug #16498, #16498,#18027)
+            Properly catch folders that are not under the client root. This
+            should prevent excessive communication with the server when
+            browsing outside of the client root.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2005.1
+
+        #70317
+            P4EXP fully supports Unicode mode Perforce servers
+
+        #68947 (Bug #15009)
+            P4EXP caches file state of files to minimize server communication.
+
+        #55539
+            P4EXP can display icons in all file views to show file state.
+
+        #74758
+            Added  a 'Refresh File State' menu item which forces an update 
+            of the displayed file information.
+
+        #72940
+            A 'Login' menu item appears in the menu when no password is set.
+
+        #72523
+            A 'Start P4Win' menu option appears in cases where the selected
+            files are not mapped in the client root.
+
+        #72515 (Bug #14374, #15789)
+            Added option to create a new client from P4EXP. P4EXP calls
+            P4Win's New Client Wizard.
+
+        #72321
+            New preferences menu to set basic P4EXP options.
+
+---------------------------------------------------------------------------
+
+Bugs fixed in 2005.1
+
+        #78570 (Bug #17446)
+            P4EXP properly caches which paths are under a client root. This
+            prevents unnecessary calls to the server and greatly improves
+            performance.
+
+---------------------------------------------------------------------------
+
+New Functionality in 2004.2
+
+        #54653 (Bug #13007, #13143)
+            Added Column extensions to P4EXP to display Perforce file data.
+            There are three columns that can be displayed; File State, Rev,
+            and Status.
+
+        #56763
+            Added support for 'p4 login' against 2004.2 servers.
+
+        #56947
+            Added support for Perforce wild characters in filenames against
+            2004.2 servers.
+
+        #60230 
+            Added Help menu item and help page
+
+        #56695  (Bug #13011)
+            Inform users in the menu if a file isn't under the current
+            workspace root. 
+
+        #54789 (Bug #9222, #12800)
+            Results dialogs are resizable.
+
+        #54675 (Bug #13404, #12596)
+            Added registry flags to disable dynamic menus and column
+            extensions.
+
+            HKEY_CURRENT_USER/Software/Perforce/P4Exp/ForceStatic 
+            HKEY_CURRENT_USER/Software/Perforce/P4Exp/NoColumns
+
+            ForceStatic is a DWORD value. Set it to 1 to disable dynamic menu
+            formation. NoCloumns is also a DWORD value. Set it to 1 to turn
+            off the column extensions.
+
+        #53037 
+            Added logging to P4EXP. To enable logging there are two registry
+            values that must be set. Only set logging if you are debugging a
+            problem with P4EXP.
+
+            HKEY_CURRENT_USER/Software/Perforce/P4Exp/Debug
+            HKEY_CURRENT_USER/Software/Perforce/P4Exp/DebugPath
+
+            Debug is a DWORD value. Set to 1 to enable logging.
+            DebugPath is a string value. Set it to the full path of the log
+            file.
+
+---------------------------------------------------------------------------
+
+Bug Fixes in 2004.2
+
+        #62254 (Bug #13120)
+            Re-arrange menu items such that "destructive" menu items are never
+            at the top. This should help users navigating Explorer using a
+            keyboard
+
+        #61839 (Bug #14642)
+            Adjust files removed count when a can't clobber error occurs.
+
+        #57062 (Bug #14005) 
+            Only show "Revert Unchanged Files" against files open for edit or
+            integrate.
+
+        #54797 (Bug #12798)
+            Fix scrollbars not showing up in Connection Information.
+
+---------------------------------------------------------------------------
+
+Bug Fixes in 2003.2
+
+        #54419 (Bug #13323)
+            Properly support NULL client roots.
+
+        #53714 (Bug #13153, #13194)
+            Fixed crash when P4CLIENT wasn't set.
